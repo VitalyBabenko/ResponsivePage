@@ -1,0 +1,46 @@
+@import "./style.scss";
+
+header {
+   @include container;
+   @include space-between;
+   padding: 45px 0;
+   align-items: center;
+
+   .logo {
+      @include font-params(700, 40px, 42px);
+      color: $main-color;
+   }
+
+   nav {
+      @include space-between;
+      width: 312px;
+
+      a {
+         @include font-params(500, 1.1rem, 19px);
+         letter-spacing: 0.025rem;
+         text-decoration: none;
+         color: $text-color;
+
+         &:hover {
+            color: $main-color;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 769px) {
+   header {
+      flex-direction: column;
+
+      .logo {
+         margin-bottom: 20px;
+      }
+   }
+}
+
+@media screen and (max-width: 380px) {
+   header {
+      padding: 30px 0;
+      margin-bottom: 30px;
+   }
+}

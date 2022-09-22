@@ -1,0 +1,224 @@
+@import "./style.scss";
+
+main {
+   display: flex;
+   position: relative;
+
+   .intro {
+      h1 {
+         margin: 100px 0 11px;
+         color: $title-color;
+         max-width: 636px;
+         @include font-params(700, 3.14rem, 4.4rem);
+         letter-spacing: 0.04rem;
+      }
+
+      p {
+         margin: 0 0 63px;
+         max-width: 630px;
+         @include font-params(400, 1.2rem, 2.3rem);
+      }
+   }
+
+   .mockups {
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: -162px;
+      width: 446px;
+      height: 534px;
+
+      & img[alt="mockup1"] {
+         position: absolute;
+         bottom: 0px;
+         left: 0;
+      }
+
+      & img[alt="mockup2"] {
+         position: absolute;
+         bottom: 0px;
+         right: 0;
+         z-index: -1;
+      }
+   }
+
+   .buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 380px;
+      button {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: $main-color;
+         width: 180px;
+         height: 60px;
+         border: none;
+         border-radius: 5px;
+         margin-bottom: 150px;
+      }
+   }
+}
+
+@media screen and (min-width: 1920px) {
+   main {
+      font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 1439px) {
+   main {
+      & .intro {
+         width: 47vw;
+      }
+
+      & .mockups {
+         right: -10vw;
+      }
+   }
+}
+
+@media screen and (max-width: 1220px) {
+   main {
+      & .intro {
+         width: 45vw;
+      }
+
+      & .mockups {
+         top: 4vw;
+         right: -8vw;
+      }
+   }
+}
+
+@media screen and (max-width: 1025px) {
+   main {
+      & .intro {
+         p {
+            margin-bottom: 50px;
+         }
+
+         & .buttons {
+            margin-bottom: 117px;
+         }
+      }
+
+      .mockups {
+         top: 6vw;
+         right: -1vw;
+
+         & img[alt="mockup1"] {
+            display: none;
+         }
+
+         & img[alt="mockup2"] {
+            right: 0vw;
+            width: 286px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 926px) {
+   main {
+      & .intro {
+         width: 100%;
+         & h1 {
+            width: 100%;
+         }
+
+         & p {
+            width: 100%;
+         }
+      }
+
+      & .mockups {
+         top: 355px;
+         right: -4vw;
+
+         & img[alt="mockup1"] {
+            display: inline-block;
+         }
+      }
+
+      .buttons {
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding-top: 200px;
+         padding-bottom: 50px;
+         width: 25vw;
+
+         button {
+            margin: 0 0 30px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 780px) {
+   main {
+      flex-direction: column;
+
+      & .intro {
+         & h1 {
+            margin-top: 40px;
+         }
+
+         & .buttons {
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 38em;
+            margin: 0 auto 30px;
+         }
+      }
+
+      & .mockups {
+         position: relative;
+         top: 0;
+         right: 0vw;
+         align-self: center;
+
+         & img[alt="mockup1"] {
+            top: 43px;
+            left: 0;
+         }
+
+         & img[alt="mockup2"] {
+            bottom: 0px;
+            right: 0;
+            z-index: -1;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 534px) {
+   main {
+      & .intro .buttons {
+         width: fit-content;
+         flex-direction: column;
+      }
+
+      & .intro .buttons {
+         margin-bottom: 0;
+      }
+
+      & .mockups {
+         position: static;
+         text-align: center;
+         width: fit-content;
+
+         & img[alt="mockup1"] {
+            position: static;
+         }
+
+         & img[alt="mockup2"] {
+            display: none;
+         }
+      }
+   }
+}
+
+

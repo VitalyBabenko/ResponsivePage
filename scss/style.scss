@@ -1,0 +1,60 @@
+@font-face {
+   font-family: "Objective";
+   font-weight: 400;
+   src: url("../font/Obective/Objective_OTF/Objective-Light.otf");
+}
+
+@font-face {
+   font-family: "Objective";
+   font-weight: 500;
+   src: url("../font//Obective/Objective_OTF/Objective-Regular.otf");
+}
+
+@font-face {
+   font-family: "Objective";
+   font-weight: 700;
+   src: url("../font//Obective/Objective_OTF/Objective-Medium.otf");
+}
+
+@mixin space-between {
+   display: flex;
+   justify-content: space-between;
+}
+@mixin container($width: 80%, $max-width: 950px) {
+   margin: 0 auto;
+   width: $width;
+   max-width: $max-width;
+}
+@mixin font-params($font-weight, $font-size, $line-height) {
+   font-weight: $font-weight;
+   font-size: $font-size;
+   line-height: $line-height;
+}
+
+$main-color: #4a99d3;
+$title-color: #260041;
+$text-color: #0f001a;
+
+$maxWidth: 1440;
+$minWidth: 380;
+html {
+   font-size: calc(12px + 4 * ((100vw - 380px) / #{$maxWidth - $minWidth}));
+}
+
+@media screen and (min-width: 1920px) {
+   html {
+      font-size: 18px;
+   }
+}
+
+body {
+   font-family: "Objective";
+   font-weight: 400;
+   background: linear-gradient(180deg, $main-color -280%, rgba(74, 153, 211, 0) 50%), #ffffff;
+}
+
+.container {
+   width: 80%;
+   max-width: 950px;
+   margin: 0 auto;
+}

@@ -1,0 +1,67 @@
+@import "./style.scss";
+
+.how-it-works {
+   background-color: rgba(74, 153, 211, 0.1);
+   text-align: center;
+   padding: 95px 0;
+
+   h2 {
+      margin: 0 0 91px;
+      color: $main-color;
+      @include font-params(700, 1.67rem, 27px);
+   }
+
+   &__info {
+      @include space-between;
+      max-width: 950px;
+      margin: 0 auto;
+
+      & img[alt="create-account"] {
+         margin-bottom: 31px;
+      }
+
+      & img[alt="authorization"] {
+         margin-bottom: 31px;
+      }
+
+      & img[alt="enjoy-the-app"] {
+         margin-top: 8px;
+         margin-bottom: 32px;
+      }
+
+      & div {
+         max-width: 224px;
+
+         h4 {
+            margin: 0 0 10px;
+            @include font-params(500, 1.1rem, 19px);
+         }
+
+         span {
+            color: $text-color;
+            @include font-params(400, 1rem, 26px);
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1000px) {
+   .how-it-works {
+      padding: 95px 45px;
+   }
+}
+
+@media screen and (max-width: 676px) {
+   .how-it-works {
+      padding: 55px 45px 25px;
+   }
+
+   .how-it-works__info {
+      flex-direction: column;
+      align-items: center;
+
+      & div {
+         margin-bottom: 50px;
+      }
+   }
+}
